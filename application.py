@@ -1,4 +1,6 @@
 import os
+import requests
+
 
 from flask import Flask, jsonify, render_template, request
 from flask_socketio import SocketIO, emit
@@ -7,15 +9,15 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 socketio = SocketIO(app)
 
-channels = {'channel_name': {'channel_name': 'talk', 'channel_creator': 'thor'}}
+channels = {'talk': {'channel_name': 'talk', 'channel_creator': 'thor'},'talk2': {'channel_name': 'talk2', 'channel_creator': 'thor2'}}
 
 @app.route("/")
 def index():
     return render_template("index.html", channels=channels)
 
-@socketio.on("create_channel")
+@socketio.on("create channel")
 def create_channel(data):
-    new_channel = data['new_channel']
-    diplay_name = data['diplay_name']
-    channels[new_channel] = {'channel_name': new_channel, 'channel_creator': diplay_name}
-    emit("channels", channels, broadcast=True)
+    new_channel = data['channel_name']
+    display_name = data['display_name']
+    channels[new_channel] = {'channel_name': new_channel, 'channel_creator': display_name}
+    emit("channels", {'channel_name': new_channel, 'channel_creator': display_name}, broadcast=True)
