@@ -11,7 +11,7 @@ channels = {'channel_name': {'channel_name': 'talk', 'channel_creator': 'thor'}}
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", channels=channels)
 
 @socketio.on("create_channel")
 def create_channel(data):
