@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 socketio = SocketIO(app)
 
-channels = [{'channel_name': 'talk', 'channel_creator': 'thor','messages':[{'message':'welcome', 'sender': 'vic','time': '10:11'},{'message':'welcome', 'sender': 'vic','time': '10:11'}] }, {'channel_name': 'talk2', 'channel_creator': 'thor2'}]
+channels = [{'channel_name': 'talk', 'channel_creator': 'thor','messages':[{'message':'welcome', 'sender': 'vic','time': '10:11'},{'message':'welcome', 'sender': 'vic','time': '10:11'}] }, {'channel_name': 'talk2', 'channel_creator': 'thor2','messages':[{'message':'welcome', 'sender': 'vic','time': '10:11'},{'message':'welcome', 'sender': 'vic','time': '10:11'}]}]
 
 @app.route("/")
 def index():

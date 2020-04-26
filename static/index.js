@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () =>{
     if (!localStorage.getItem('display_name')){
         document.querySelector('#page').innerHTML = '';
@@ -54,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         const a = document.createElement('a');
         a.className = "list-group-item list-group-item-action list-group-item-primary";
         a.innerHTML =  `${data.channel_name} by ${data.channel_creator}`;
-        
+
                 // Add new item to task list
         document.querySelector('#channel').append(a);
         

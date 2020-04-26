@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () =>{
 	const display_name = localStorage.getItem('display_name');
+	const channel_id = localStorage.getItem('channel_id');
     // Connect to websocket
     var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port);
     // When connected, configure buttons
