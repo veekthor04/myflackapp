@@ -1,0 +1,19 @@
+
+#whole_page{
+	padding: 10px;
+	margin: 10px;
+}
+#chat_box1{
+	width: 90%;
+	float: right;
+	margin: 10px;
+}
+#chat_box2{
+	width: 90%;
+	float: left;
+	margin: 10px;
+	background-color: #cbd8f7;
+}
+#task{
+	max-height: 50px;
+}
