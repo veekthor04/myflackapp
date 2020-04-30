@@ -6,38 +6,31 @@
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
 		<script src="{{ url_for('static', filename='channel.js') }}"></script>
 		<script type="text/javascript">
-			var channel_id = {{ channel_id }};
-			localStorage.setItem('channel_id', channel_id);
+			var channel_id = {{ channel_id }}
 		</script>
 		<title>My Website</title>
 	</head>
 	<body>
-		<div id="whole_page">
-			<div id="page">
-				<h1 id="welcome">Welcome to {{channel_name}}</h1>
 
-				{% for message in messages %}
-
-				<div class="card" id="chat_box1">
-  					<div class="card-body">
-    					<blockquote class="blockquote mb-0">
-      							<p>{{message['message']}}</p>
-      							<footer class="blockquote-footer">{{message['sender']}} @<cite title="Source Title" id="time">{{message['time']}}</cite></footer>
-    					</blockquote>
-  					</div>
-				</div>
-				{% endfor %}
-				<div id="message">
-					
-				</div>
-
-        		<form id="new_message">
-            		<div class="form-group">
-    					<textarea id="task" class="form-control" rows="3"></textarea>
-  					</div>
-  					<button id="submit" type="submit" class="btn btn-primary">send</button>
+		  <div class='wrapper'>
+		  		<a href="#" id="leave" class="myButton1">Leave Channel</a>
+		    	<h1 class='text-center'>
+		      		{{channel_name}}
+		    	</h1>
+		    	<h4>Messages</h4>
+		    	<div id="msg">
+			    
+			  	</div>
+			  	<form id="new_message">
+		  			<div class="form-row align-items-center">
+		    			<div class="col-auto my-1" id="box">
+		      				<textarea id="task" class="form-control" rows="3"></textarea>
+		    			</div>
+		    			<div class="col-auto my-1">
+		      				<button id="submit" type="submit" class="btn btn-primary">send</button>
+		    			</div>
+		  			</div>
 				</form>
-			</div>
-		</div>
+		  	</div>
 	</body>
 </html>
