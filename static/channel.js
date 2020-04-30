@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
   
          // Connect to websocket
-        var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port);
+        var socket = io.connect('https://' + document.domain + ':' + location.port);
         // When connected, configure buttons
         socket.on('connect', () => {
     	// By default, submit button is disabled
