@@ -1,19 +1,169 @@
+@charset "UTF-8";
+.text-center {
+  text-align: center;
+}
 
-#whole_page{
-	padding: 10px;
-	margin: 10px;
+.cf {
+  *zoom: 1;
 }
-#chat_box1{
-	width: 90%;
-	float: right;
-	margin: 10px;
+.cf:before, .cf:after {
+  content: " ";
+  display: table;
 }
-#chat_box2{
-	width: 90%;
-	float: left;
-	margin: 10px;
-	background-color: #cbd8f7;
+.cf:after {
+  clear: both;
+}
+
+body {
+  background-color: #161719;
+  font-family: 'Roboto', sans-serif;
+  color: #9fa2a7;
+}
+body .wrapper {
+  padding: 30px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+body .wrapper h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+body .wrapper .speechbubble {
+  background-color: #26272b;
+  color: #9fa2a7;
+  font-size: .8em;
+  line-height: 1.75;
+  padding: 25px 25px;
+  margin-bottom: 75px;
+  cursor: default;
+}
+body .wrapper .speechbubble:nth-child(2n) {
+  border-left: 5px solid;
+}
+body .wrapper .speechbubble:nth-child(2n):after {
+  content: '';
+  margin-top: -30px;
+  padding-top: 0px;
+  position: relative;
+  bottom: -45px;
+  left: 20px;
+  border-width: default;
+  border-style: solid;
+  border-color: #26272b transparent;
+  display: block;
+  width: 0;
+}
+body .wrapper .speechbubble:nth-child(2n+1) {
+  border-right: 5px solid;
+}
+body .wrapper .speechbubble:nth-child(2n+1):after {
+  content: '';
+  margin-top: -30px;
+  padding-top: 0px;
+  position: relative;
+  bottom: -45px;
+  left: 350px;
+  border-width: default;
+  border-style: solid;
+  border-color: #26272b transparent;
+  display: block;
+  width: 0;
+}
+body .wrapper .speechbubble:nth-child(4n+1) {
+  border-color: #56b273;
+}
+body .wrapper .speechbubble:nth-child(4n+2) {
+  border-color: #01AD9B;
+}
+body .wrapper .speechbubble:nth-child(4n+3) {
+  border-color: #b388dd;
+}
+body .wrapper .speechbubble:nth-child(4n+4) {
+  border-color: #ff8750;
+}
+body .wrapper .speechbubble p:before {
+  content: "“";
+  font-family: Georgia;
+  font-size: 40px;
+  line-height: 0;
+  display: inline-block;
+  display: -webkit-inline-box;
+}
+body .wrapper .speechbubble .username {
+  display: inline;
+  font-style: italic;
+  float: right;
+}
+body .wrapper .speechbubble .username:before {
+  content: '- ';
+}
+
+#speech2{
+  position: relative;
+  left: 20px;
+}
+#speech1{
+  position: relative;
+  right: 20px;
+}
+.myButton {
+  box-shadow: 0px 1px 0px 0px #1c1b18;
+  background-color:transparent;
+  border-radius:15px;
+  border:2px solid #333029;
+  display:inline-block;
+  cursor:pointer;
+  color:#505739;
+  font-family:Arial;
+  font-size:14px;
+  font-weight:bold;
+  padding:0px 16px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+  background-color:transparent;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+#box{
+  width: 90%;
+}
+hr,#submit{
+  background-color: #9fa2a7;
+}
+#box{
+  width:75%
 }
 #task{
-	max-height: 50px;
+  height: 40px;
+}
+
+
+.myButton1 {
+  position: relative;
+  right: 5px;
+  box-shadow: 0px 0px 0px 2px #91b8b3;
+  background-color:#000000;
+  border-radius:10px;
+  border:1px solid #566963;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:19px;
+  padding:10px 37px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2b665e;
+}
+.myButton1:hover {
+  background-color:#6c7c7c;
+}
+.myButton1:active {
+  position:relative;
+  top:1px;
 }
