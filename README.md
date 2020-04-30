@@ -22,3 +22,5 @@ channel.css: this is the style sheet for channel.html
 index.js: this contains the javascript commands for index.html
 
 channel.js this contains the javascript commands for channel.html
+
+Personal Touch: My app supports deleting one’s own messages
