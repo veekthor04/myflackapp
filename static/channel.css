@@ -26,7 +26,7 @@ body {
 }
 @media (max-width: 500px) {
   body {
-    max-width: 500px;
+    width: 100%;
   }
 }
 body .wrapper {
