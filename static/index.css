@@ -19,6 +19,16 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #9fa2a7;
 }
+@media (min-width: 501px) {
+  body {
+    max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    max-width: 500px;
+  }
+}
 body .wrapper {
 	padding: 30px;
   max-width: 450px;
