@@ -4,4 +4,4 @@ Flask==1.1.2
 gunicorn==20.0.4
 Werkzeug==0.16.1
 request==2019.4.13
-eventlet==0.25.1
+eventlet==0.31.0
